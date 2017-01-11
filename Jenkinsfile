@@ -1,6 +1,6 @@
-node {
-input 'Ready to go?'
+node{
     stage "CHECKOUT"
+input 'Ready to go?'
    echo 'Hello World'
    git url: 'https://github.com/pmisarwala/samplewebapp.git', branch: 'master'
 

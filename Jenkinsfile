@@ -10,6 +10,6 @@ node {
     echo 'This is the build stage'
 }
 node{
-echo 'this is test node' > myfile1
+echo 'this is test node'
 }
 

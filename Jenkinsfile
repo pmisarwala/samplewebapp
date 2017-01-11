@@ -10,6 +10,7 @@ node {
     echo 'This is the build stage'
 }
 node{
-echo 'this is test node'
+stage "new stage"
+git url: 'https://github.com/pmisarwala/monrepo1.git'
 }
 

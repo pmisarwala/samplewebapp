@@ -1,14 +1,17 @@
-node{
-    stage "CHECKOUT"
-   echo 'Hello World'
-   git url: 'https://github.com/pmisarwala/samplewebapp.git', branch: 'master'
+node {
+   // Mark the code checkout 'stage'....
+   stage 'Checkout'
 
-   stage "Build"
-    def mvnHome = tool 'M3'
-   env.PATH = "${mvnHome}/bin:${env.PATH}"
- sh 'mvn -B verify'
- step([$class: 'ArtifactArchiver', artifacts: '**/target/*.jar', fingerprint: true])
-  step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
-    echo 'This is the build stage'
+   // Checkout code from repository
+   checkout scm
+
+   // Get the maven tool.
+   // ** NOTE: This 'M3' maven tool must be configured
+   // **       in the global configuration.
+   def mvnHome = tool 'M3'
+
+   // Mark the code build 'stage'....
+   stage 'Build'
+   // Run the maven build
+   sh "${mvnHome}/bin/mvn clean install"
 }
-

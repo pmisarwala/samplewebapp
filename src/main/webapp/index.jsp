@@ -5,7 +5,7 @@
 
 <form method="get" action="/html/codes/html_form_handler.cfm">
   <p>
-    <label>Name
+    <label>New Name
       <input type="text" name="customer_name" required>
     </label> 
   </p>

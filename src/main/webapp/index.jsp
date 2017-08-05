@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<h1> Monday Tuesday </h1>
+<h1> Monday Tuesday wedesday </h1>
 <h1>Hello Parvez</h1>
 <title>My Example</title>
 

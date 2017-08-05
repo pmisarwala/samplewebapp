@@ -1,9 +1,8 @@
 <!DOCTYPE html>
+<title>My Example</title>
 <h1>Jan</h1>
 <h1>Sun Sat Friday Monday Tuesday wedesday thursday </h1>
 <h1>Hello Parvez</h1>
-<title>My Example</title>
-
 <form method="get" action="/html/codes/html_form_handler.cfm">
   <p>
     <label>New Name
